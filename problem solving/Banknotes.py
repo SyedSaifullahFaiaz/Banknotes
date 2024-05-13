@@ -8,6 +8,7 @@ bankn5 = 5
 bankn6 = 2
 bankn7 = 1
 
+print(num)
 if num / bankn1 < 1: 
     print(0, "nota(s) de R$ 100,00", end="\n" )
 else:
