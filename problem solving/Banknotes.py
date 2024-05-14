@@ -1,57 +1,101 @@
-num = int(input())
+num = float(input())
 
-bankn1 = 100
-bankn2 = 50
-bankn3 = 20
-bankn4 = 10
-bankn5 = 5
-bankn6 = 2
-bankn7 = 1
+bankn1 = 50
+bankn2 = 20
+bankn3 = 10
+bankn4 = 5
+Coin1 = 2
+Coin2 = 1
+Coin3 = 0.50
+Coin4 = 0.20
+Coin5 = 0.10
+Coin6 = 0.05
+Coin7 = 0.02
+Coin8 = 0.01
 
 print(num)
 if num / bankn1 < 1: 
-    print(0, "nota(s) de R$ 100,00", end="\n" )
+    print(0, "£50 notes", end="\n" )
 else:
-    print(int(num / bankn1), "nota(s) de R$ 100,00", end="\n")
-    num = int(num - int(num / bankn1)*bankn1)
+    print(int(num / bankn1), "£50 notes", end="\n")
+    num = float(num - int(num / bankn1)*bankn1)
 
+#£20
 if num / bankn2 < 1: 
-    print(0, "nota(s) de R$ 50,00", end="\n" )
+    print(0, "£20 notes ", end="\n" )
 else:
-    print(int(num/bankn2), "nota(s) de R$ 50,00", end="\n")
-    num = int(num - int(num / bankn2)*bankn2)
+    print(int(num/bankn2), "£20 notes ", end="\n")
+    num = float(num - int(num / bankn2)*bankn2)
 
+#£10
 if num / bankn3 < 1: 
-    print(0, "nota(s) de R$ 20,00", end="\n" )
+    print(0, "£10 notes", end="\n" )
 else:
-    print(int(num/bankn3), "nota(s) de R$ 20,00", end="\n")
-    num = int(num - int(num / bankn3)*bankn3)
+    print(int(num/bankn3), "£10 notes", end="\n")
+    num = float(num - int(num / bankn3)*bankn3)
 
+#£5
 if num / bankn4 < 1: 
-    print(0, "nota(s) de R$ 10,00", end="\n" )
+    print(0, "£5 notes", end="\n" )
 else:
-    print(int(num/bankn4), "nota(s) de R$ 10,00", end="\n")
-    num = int(num - int(num / bankn4)*bankn4)
+    print(int(num/bankn4), "£5 notes", end="\n")
+    num = float(num - int(num / bankn4)*bankn4)
 
-if num / bankn5 < 1: 
-    print(0, "nota(s) de R$ 5,00", end="\n" )
+#£2
+if num / Coin1 < 1: 
+    print(0, "£2 coins", end="\n" )
 else:
-    print(int(num/bankn5), "nota(s) de R$ 5,00", end="\n")
-    num = int(num - int(num / bankn5)*bankn5)
+    print(int(num/Coin1), "£2 coins", end="\n")
+    num = float(num - int(num / Coin1)*Coin1)
 
-if num / bankn6 < 1: 
-    print(0, "nota(s) de R$ 2,00", end="\n" )
+#£1
+if num / Coin2 < 1: 
+    print(0, "£1 coins", end="\n" )
 else:
-    print(int(num/bankn6), "nota(s) de R$ 2,00", end="\n")
-    num = int(num - int(num / bankn6)*bankn6)
+    print(int(num/Coin2), "£1 coins", end="\n")
+    num = float(num - int(num / Coin2)*Coin2)
 
-if num / bankn7 < 1: 
-    print(0, "nota(s) de R$ 1,00", end="\n" )
+#50p
+if num / Coin3 < 1: 
+    print(0, "50p coins", end="\n" )
 else:
-    print(int(num/bankn7), "nota(s) de R$ 1,00", end="\n")
-    num = int(num - int(num / bankn7)*bankn7)
+    print(int(num/Coin3), "50p coins", end="\n")
+    num = float(num - int(num / Coin3)*Coin3)
 
+#20p
+if num / Coin4 < 1: 
+    print(0, "20p coins", end="\n" )
+else:
+    print(int(num/Coin4), "20p coins", end="\n")
+    num = float(num - int(num / Coin4)*Coin4)
 
+#10p
+if num / Coin5 < 1: 
+    print(0, "10p coins", end="\n" )
+else:
+    print(int(num/Coin5), "10p coins", end="\n")
+    num = float(num - int(num / Coin5)*Coin5)
+
+#5p
+if num / Coin6 < 1: 
+    print(0, "5p coins", end="\n" )
+else:
+    print(int(num/Coin6), "5p coins", end="\n")
+    num = float(num - int(num / Coin6)*Coin6)
+
+#2p
+if num / Coin7 < 1: 
+    print(0, "2p coins", end="\n" )
+else:
+    print(int(num/Coin7), "2p coins", end="\n")
+    num = float(num - int(num / Coin7)*Coin7)
+
+#1p
+if num / Coin8 < 1: 
+    print(0, "1p coins", end="\n" )
+else:
+    print(int(num/Coin8), "1p coins", end="\n")
+    num = float(num - int(num / Coin8)*Coin8)
 
 
 
