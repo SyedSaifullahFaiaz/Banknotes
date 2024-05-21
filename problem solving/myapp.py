@@ -1,30 +1,47 @@
 num = input()
-
 num = num.split()
-X = int(num[0])
-Y = int(num[1])
 
-Menu = {1 : 4.00, 2 : 4.50, 3 : 5.00, 4 : 2.00, 5 : 1.50}
+a = float(num[0])
+b = float(num[1])
+c = float(num[2])
+d = float(num[3])
 
-if X in Menu:
-    price = Menu[X]
+G1 = 2 * (a / 10)
+G2 = 3 * (b / 10)
+G3 = 4 * (c / 10)
+G4 = 1 * (d / 10)
 
-    total_cost = price * Y
+avrg = (G1 + G2 + G3 + G4)
 
-    print("Total: R$ ", f"{total_cost:.2f}", end="\n")
+avrg = "{:.1f}".format(avrg)
 
-# if X == 1:
-#     print("Total: R$ ", f"{4.00 * Y:.2f}", end="\n")
-# elif X == 2:
-#     print("Total: R$ ", f"{4.50 * Y:.2f}", end="\n")
-# elif X == 3:
-#     print("Total: R$ ", f"{5.00 * Y:.2f}", end="\n")
-# elif X == 4:
-#     print("Total: R$ ", f"{2.00 * Y:.2f}", end="\n")
-# elif X == 5:
-#     print("Total: R$ ", f"{1.50 * Y:.2f}", end="\n")
-# else:
-#     num = input()
+print("Media:", avrg ,end="\n")
+
+
+
+if float(avrg) > 7.0:
+    print("Aluno aprovado.", end="\n")
+elif float(avrg) < 5.0:
+    print("Aluno reprovado.", end="\n")          
+else:
+    print( "Aluno em exame.", end="\n")
+
+    e = float(input())
+
+    print("Nota do exame:", e, end="\n")
+
+    avrg = (avrg + e) / 2
+
+    if avrg >= 5.0:
+        print("Aluno aprovado.", end="\n")
+
+        print("Media final:", avrg, end="\n")
+
+    else:
+        print("Aluno reprovado.", end="\n")  
+
+        print("Media final:", avrg, end="\n")
+
 
 
 
