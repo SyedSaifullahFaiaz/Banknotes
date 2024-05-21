@@ -13,15 +13,17 @@ G4 = 1 * (d / 10)
 
 avrg = (G1 + G2 + G3 + G4)
 
-avrg = "{:.1f}".format(avrg)
+avrg_str = str(avrg)
+decimal_pos = avrg_str.find('.')
+if decimal_pos != -1:
+    avrg_str = avrg_str[:decimal_pos + 2]
+avrg = float(avrg_str)
 
 print("Media:", avrg ,end="\n")
 
-
-
-if float(avrg) > 7.0:
+if avrg > 7.0:
     print("Aluno aprovado.", end="\n")
-elif float(avrg) < 5.0:
+elif avrg < 5.0:
     print("Aluno reprovado.", end="\n")          
 else:
     print( "Aluno em exame.", end="\n")
@@ -32,11 +34,16 @@ else:
 
     avrg = (avrg + e) / 2
 
+    avrg_str = str(avrg)
+    decimal_pos = avrg_str.find('.')
+    if decimal_pos != -1:
+        avrg_str = avrg_str[:decimal_pos + 2]
+    avrg = float(avrg_str)
+
     if avrg >= 5.0:
         print("Aluno aprovado.", end="\n")
 
         print("Media final:", avrg, end="\n")
-
     else:
         print("Aluno reprovado.", end="\n")  
 
